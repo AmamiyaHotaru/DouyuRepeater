@@ -1,4 +1,4 @@
-# 虎扑黑名单/HupuBlackList
+# 斗鱼复读姬/DouyuRepeater
 一款lsposed/xposed插件，解除斗鱼直播间+1限制
 ## 安装
 ### :warning: 未ROOT用户使用需要卸载旧的虎扑 :warning:
