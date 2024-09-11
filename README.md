@@ -5,5 +5,5 @@
 ### 方法一.下载模块自行安装或修补（推荐）
 #### 使用[Shizuku](https://github.com/RikkaApps/Shizuku)+[LSPatch](https://github.com/LSPosed/LSPatch)将模块修补进去。
 
-### 方法二.使用修补好的虎扑安装包
+### 方法二.使用修补好的斗鱼安装包
 #### [Releases](https://github.com/AmamiyaHotaru/DouyuRepeater/releases)界面下载最新的修补好的APP安装使用
