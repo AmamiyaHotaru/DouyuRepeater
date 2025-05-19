@@ -11,10 +11,14 @@ import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XposedBridge;
 import de.robv.android.xposed.XposedHelpers;
 
-public class DanmakuHook implements IHook{
+
+/**
+ * 全屏强制+1
+ */
+public class ForceAddOneLandscapeHook implements IHook {
     @Override
     public String getHookName() {
-        return "滚动弹幕";
+        return "滚动弹幕+1";
     }
 
     @Override
@@ -23,14 +27,10 @@ public class DanmakuHook implements IHook{
         XposedBridge.log("[DouyuRepeat] 开始hook" + getHookName());
         final Class<?> rankBeanClass = XposedHelpers.findClass("com.douyu.lib.xdanmuku.bean.RankBean", classLoader);
         final Class<?> userInfoBeanClass = XposedHelpers.findClass("com.douyu.live.common.beans.UserInfoBean", classLoader);
-        findAndHookMethod("com.douyu.module.player.p.danmuoption.papi.LandDanmuOptionView", classLoader, "h", rankBeanClass,userInfoBeanClass , boolean.class,HashMap.class, boolean.class, new XC_MethodHook() {
-            @Override
-            protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
-                super.beforeHookedMethod(param);
-            }
+        findAndHookMethod("com.douyu.module.player.p.danmuoption.papi.LandDanmuOptionView", classLoader, "h", rankBeanClass, userInfoBeanClass, boolean.class, HashMap.class, boolean.class, new XC_MethodHook() {
+
             @Override
             protected void afterHookedMethod(MethodHookParam param) throws Throwable {
-                super.afterHookedMethod(param);
 
                 // 获取 LandDanmuOptionView 实例对象
                 Object landDanmuOptionView = param.thisObject;

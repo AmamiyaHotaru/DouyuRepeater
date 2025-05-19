@@ -11,7 +11,10 @@ import de.robv.android.xposed.XC_MethodReplacement;
 import de.robv.android.xposed.XposedBridge;
 import de.robv.android.xposed.XposedHelpers;
 
-public class DialogHook implements IHook{
+/**
+ * 竖屏强制+1
+ */
+public class ForceAddOnePortraitHook implements IHook {
     @Override
     public String getHookName() {
         return "非全屏界面弹窗";
@@ -32,16 +35,13 @@ public class DialogHook implements IHook{
         });
 
 
-
         findAndHookMethod("tv.douyu.danmuopt.view.PortraitDanmuOptionDialog", classLoader, "c", new XC_MethodHook() {
             @Override
             protected void afterHookedMethod(MethodHookParam param) throws Throwable {
-                // 调用原方法
-                super.afterHookedMethod(param);
                 // 获取目标对象
                 Object targetObject = param.thisObject;
 
-                
+
                 Field field = targetObject.getClass().getField("g");
                 field.setAccessible(true); // 设置字段可访问
                 View f134844g = (View) field.get(targetObject); // 获取字段的值
