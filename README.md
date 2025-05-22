@@ -1,5 +1,5 @@
 # 斗鱼复读姬/DouyuRepeater
-一款lsposed/xposed插件，解除斗鱼直播间+1限制
+一款lsposed/xposed插件，解除斗鱼直播间+1限制，弹幕添加自定义后缀
 ## 安装
 ### :warning: 未ROOT用户使用需要卸载旧的斗鱼 :warning:
 ### 方法一.下载模块自行安装或修补（推荐）
