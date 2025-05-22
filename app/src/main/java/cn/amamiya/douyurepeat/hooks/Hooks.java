@@ -7,11 +7,11 @@ public class Hooks {
 
             new ForceAddOnePortraitHook(),
             new ForceAddOneLandscapeHook(),
-            new AddSuffixSendDanmakuHook(),
-            new AddSuffixAddOneHook(),
-            new DanmakuEditTextPortraitHook(),
-            new DanmakuEditTextLandscapeHook(),
-            new ModifyHintHook()
+            new AddSuffixSendDanmaku(),
+            new DanmakuEditHookOld(),
+            new SettingHook(),
+            new DanmakuEditHookNew(),
+            new DisableUpdateHook()
     };
 
     public static void init(ClassLoader classLoader, String sourceDir) {
